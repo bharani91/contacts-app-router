@@ -2,18 +2,21 @@
 	<div class="well">
 		{{#with contact}}
 
-		<form>
+		<form id="editContactForm">
 			<label>Name</label>
-			<input type="text" class="input-block-level name" value="{{ name }}">
+			<input type="text" id="name" name="name" class="input-block-level name" value="{{ name }}">
+			<div id="name-error" class="help-block muted">Must be alphanumerical at least 3 characters and no longer then 9</div>
 
 			<label>Email</label>
-			<input type="text" class="input-block-level email" value="{{ email }}">
+			<input type="text" id="email" name="email" class="input-block-level email" value="{{ email }}">
+						<div id="email-error" class="help-block muted">Please enter valid email address</div>
 
 			<label>Phone</label>
-			<input type="text" class="input-block-level phone" value="{{ phone }}">
+			<input type="text" id="phone" name="phone" class="input-block-level phone" value="{{ phone }}">
+			<div id="phone-error" class="help-block muted">Please enter valid phone number</div>
 
 			<label>Twitter</label>
-			<input type="text" class="input-block-level twitter" value="{{ twitter }}">
+			<input type="text" id="twitter" name="twitter" class="input-block-level twitter" value="{{ twitter }}">
 			
 			<hr>
 		

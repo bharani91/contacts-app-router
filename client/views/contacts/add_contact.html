@@ -1,18 +1,22 @@
 <template name="add_contact">
 	<div class="well">
-		<form>
+	<form id="addContactForm">
 			<label>Name</label>
-			<input type="text" class="input-block-level name">
+			<input type="text"  name="name" id="name" class="input-block-level name">
+			<div id="name-error" class="help-block muted">Must be alphanumerical at least 3 characters and no longer then 9</div>
+
 
 			<label>Email</label>
-			<input type="text" class="input-block-level email">
+			<input type="text"  name="email" id="email" class="input-block-level email">
+			<div id="email-error" class="help-block muted">Please enter valid email address</div>
 
 			<label>Phone</label>
-			<input type="text" class="input-block-level phone">
-
+			<input type="text" name="phone" id="phone"  class="input-block-level phone">
+			<div id="phone-error" class="help-block muted">Please enter valid phone number</div>
+	
 			<label>Twitter</label>
-			<input type="text" class="input-block-level twitter">
-			
+			<input type="text" name="twitter" id="twitter" class="input-block-level twitter">
+
 			<hr>
 
 			<input type="submit" class="btn btn-primary btn-large" value="Add Contact">

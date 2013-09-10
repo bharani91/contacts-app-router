@@ -16,4 +16,9 @@ Template.notification.rendered = function() {
 	Meteor.defer(function() {
     	Notifications.update(this._id, {$set: {seen: true}});
   	});
+
+	var elem = this;
+	Meteor.setTimeout(function() {
+		$(elem.firstNode).fadeOut("slow");
+	}, 3*1000);
 }

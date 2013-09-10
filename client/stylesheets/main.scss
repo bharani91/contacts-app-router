@@ -39,6 +39,18 @@
     }
 }
 
+.muted {
+    color: darken(#ccc, 20%);
+    font-size: 12px;
+    margin-bottom: 20px;
+
+
+    &.alert-error {
+        color: #b94a48;
+        font-size: 14px;
+    }
+}
+
 table.table {
     tr {
         td {
