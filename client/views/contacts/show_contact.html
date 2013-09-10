@@ -1,0 +1,36 @@
+<template name="show_contact">
+	<div class="well">
+	{{#with contact}}
+		<h2>{{ name }}</h2>
+		
+		<hr>
+		
+		<ul class="unstyled">
+			<li>
+				<h3>
+					Email: {{ email }}
+				</h3>
+			</li>
+
+			<li>
+				<h3>
+					Phone: {{ phone }}
+				</h3>
+			</li>
+
+			<li>
+				<h3>
+					Twitter: {{ twitter }}
+				</h3>
+			</li>
+		</ul>
+
+		<hr>
+
+		<a href="{{edit_contactPath _id}}" class="btn btn-primary"><i class="icon-edit"></i> Edit Contact</a>
+
+		<a href="{{contact_listPath}}" class="btn"><i class="icon-chevron-left"></i> Back to List</a>
+	{{/with}}
+
+	</div>
+</template>

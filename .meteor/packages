@@ -4,8 +4,6 @@
 # but you can also edit it by hand.
 
 standard-app-packages
-autopublish
-insecure
 preserve-inputs
 bootstrap
 accounts-base
@@ -14,3 +12,4 @@ regulate.js
 router
 scss
 font-awesome
+spin

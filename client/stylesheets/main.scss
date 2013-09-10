@@ -27,11 +27,22 @@
             // font-size: 30px;
         }
     }
+    .navbar-form {
+        margin-left: 20px;    
+    }
 }
 
 .alert.alert-error {
     ul {
         margin: 0;
         list-style: none;
+    }
+}
+
+table.table {
+    tr {
+        td {
+            vertical-align: middle;
+        }
     }
 }

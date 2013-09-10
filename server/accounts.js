@@ -1,6 +1,6 @@
-Meteor.startup(function () {
-	process.env.MAIL_URL = "smtp://xxxx%40gmail.com:yyyy@smtp.gmail.com:465";
-});
+// Meteor.startup(function () {
+// 	process.env.MAIL_URL = "smtp://xxxx%40gmail.com:yyyy@smtp.gmail.com:465";
+// });
 
 
 Accounts.urls.resetPassword = function (token) {
@@ -22,6 +22,5 @@ Accounts.config({sendVerificationEmail: false, forbidClientAccountCreation: fals
 
 Accounts.onCreateUser(function (options, user) {
 	user.profile = options.profile;
-	//Accounts.sendVerificationEmail(user._id, user.emails[0].address);
 	return user;
 });

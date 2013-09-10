@@ -9,11 +9,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <div class="nav-collapse collapse">
-                    <ul class="nav">
-                        <li class="{{ TabActive 'home'}}"><a href="{{homePath}}"><i class="icon-home"></i> Home</a></li>
-                        <li class="{{ TabActive 'about'}}"><a href="{{aboutPath}}"><i class="icon-user"></i> About Us</a></li>
-                        <li class="{{ TabActive 'terms'}}"><a href="{{termsPath}}"><i class="icon-file"></i> Terms</a></li>
-                    </ul>
+
 
 
 
@@ -23,10 +19,8 @@
 
                     {{else}}
 
-                    <ul class="nav pull-right">
-                        <li class="{{ TabActive 'login'}}"><a href="{{loginPath}}"><i class="icon-signin"></i> Login</a></li>
-                        <li class="{{ TabActive 'signup'}}"><a href="{{signupPath}}"><i class="icon-ok-circle"></i> Signup</a></li>
-                    </ul>
+                    {{> loggedout_header }}
+
                     {{/if}}
 
                 </div>
@@ -40,18 +34,47 @@
 
 <template name="loggedin_header">
     {{#if loggingIn}}
-    <p class="pull-right"><strong>Logging In!</strong></p>
+    <p class="pull-right navbar-text"><strong>Logging In!</strong></p>
+    
     {{else}}
 
-    <ul class="nav pull-right">
-        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome, {{ firstName }} <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-                <li><a href="/users/{{ id }}/edit"><i class="icon-cog"></i> Edit Profile</a></li>
-                <li class="divider"></li>
-                <li><a href="/logout"><i class="icon-off"></i> Logout</a></li>
-            </ul>
+    <ul class="nav">
+        <li class="{{ TabActive 'contact_list'}}"><a href="{{contact_listPath}}"><i class="icon-book"></i> Your Contacts</a></li>
+        <li>
+
+            <form class="navbar-form">
+                <a href="{{add_contactPath}}" class="btn btn-primary {{ TabActive 'add_contact'}}"><i class="icon-plus"></i> Add New Contact</a>
+            </form>
+
+            
         </li>
+    </ul>
+
+
+    <ul class="nav pull-right">
+        <li>
+            <p class="navbar-text">
+                Welcome, {{ firstName }}
+            </p>
+        </li>
+        <li><a href="/logout"><i class="icon-off"></i> Logout</a></li>
+
     </ul>
     {{/if}}
 </template>
+
+<template name="loggedout_header">
+    <ul class="nav">
+        <li class="{{ TabActive 'home'}}"><a href="{{homePath}}"><i class="icon-home"></i> Home</a></li>
+        <li class="{{ TabActive 'about'}}"><a href="{{aboutPath}}"><i class="icon-user"></i> About Us</a></li>
+        <li class="{{ TabActive 'terms'}}"><a href="{{termsPath}}"><i class="icon-file"></i> Terms</a></li>
+    </ul>
+
+    <ul class="nav pull-right">
+        <li class="{{ TabActive 'login'}}"><a href="{{loginPath}}"><i class="icon-signin"></i> Login</a></li>
+        <li class="{{ TabActive 'signup'}}"><a href="{{signupPath}}"><i class="icon-ok-circle"></i> Signup</a></li>
+    </ul>
+</template>
+
+
 

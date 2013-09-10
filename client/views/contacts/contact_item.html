@@ -1,0 +1,30 @@
+<template name="contact_item">
+
+	<tr>
+		<td>
+			<h3>
+				{{ name }}
+			</h3>
+		</td>
+
+		<td>
+			{{ email }}
+		</td>
+
+		<td>
+			{{ phone }}
+		</td>
+
+		<td>
+			{{ twitter }}
+		</td>
+
+		<td>
+			
+		<a href="{{edit_contactPath _id}}" class="btn edit"><i class="icon-edit"></i> Edit</a>
+			<button class="btn btn-danger delete"><i class="icon-trash"></i> Delete</button>
+			
+		</td>
+	</tr>
+
+</template>

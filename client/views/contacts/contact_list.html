@@ -1,0 +1,33 @@
+<template name="contact_list">
+	<table class="table table-striped table-bordered">
+		<thead>
+			<tr>
+				<th>
+					Name
+				</th>
+
+				<th>
+					Email
+				</th>
+
+				<th>
+					Phone
+				</th>
+
+				<th>
+					Twitter
+				</th>
+
+				<th>
+					Actions
+				</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			{{#each contacts}}
+				{{> contact_item }}
+			{{/each}}
+		</tbody>
+	</table>
+</template>
