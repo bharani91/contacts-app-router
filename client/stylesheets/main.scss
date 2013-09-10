@@ -1,0 +1,37 @@
+/**
+*
+* Name: Contacts App
+* Author: Bharani Muthukumaraswamy
+* Author Email: bharani@abhayam.co.in
+*
+**/
+
+
+.container-fluid {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#wrap {
+    padding-top: 80px;
+    min-height: 400px;
+}
+
+.well.home {
+    margin: 100px auto;
+}
+
+.navbar {
+    .brand {
+        i {
+            // font-size: 30px;
+        }
+    }
+}
+
+.alert.alert-error {
+    ul {
+        margin: 0;
+        list-style: none;
+    }
+}
